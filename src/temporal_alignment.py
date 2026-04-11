@@ -45,13 +45,12 @@ def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SI
     emotion_cols = [c for c in tweet_df.columns if c in
                     {"anger", "fear", "joy", "sadness", "surprise", "disgust"}]
 
-    agg_dict = {
-        "text_clean": "count",        # tweet count
-        "arousal":    "mean",
-        "valence":    "mean",
-    }
-    for col in emotion_cols:
-        agg_dict[col] = "mean"
+    agg_dict = {"text_clean": "count"}   # tweet count
+
+    # Only aggregate arousal/valence if the classifier has been run
+    for col in ["arousal", "valence"] + emotion_cols:
+        if col in tweet_df.columns:
+            agg_dict[col] = "mean"
 
     agg = tweet_df.groupby(["fixture_id", "window_5min"]).agg(agg_dict).reset_index()
     agg.rename(columns={"text_clean": "tweet_count"}, inplace=True)
