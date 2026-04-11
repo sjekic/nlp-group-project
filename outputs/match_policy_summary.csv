@@ -1,0 +1,43 @@
+fixture_id,match,total_windows,safe_windows,risky_windows,no_ad_windows,mean_receptivity,best_receptivity,pct_safe
+11867556,AFC Bournemouth vs Tottenham Hotspur,2,2,0,0,0.8,0.8,100.0
+11867561,Everton vs Southampton,5,5,0,0,0.8,0.8,100.0
+11867566,AFC Bournemouth vs Leicester City,3,3,0,0,0.8000000000000002,0.8,100.0
+11867569,Liverpool vs Burnley,1,1,0,0,0.8,0.8,100.0
+11867572,Sheffield United vs Chelsea,7,7,0,0,0.7428571428571429,0.8,100.0
+11867573,Tottenham Hotspur vs Arsenal,3,3,0,0,0.6666666666666666,0.8,100.0
+11867575,Wolverhampton Wanderers vs Everton,2,2,0,0,0.8,0.8,100.0
+11867577,Burnley vs Wolverhampton Wanderers,29,29,0,0,0.7724137931034484,0.8,100.0
+11867578,Chelsea vs Norwich City,29,29,0,0,0.7862068965517242,0.8,100.0
+11867579,Crystal Palace vs Manchester United,11,11,0,0,0.7636363636363637,0.8,100.0
+11867580,Everton vs Aston Villa,13,13,0,0,0.7384615384615384,0.8,100.0
+11867581,Leicester City vs Sheffield United,1,1,0,0,0.8,0.8,100.0
+11867582,Manchester City vs AFC Bournemouth,29,29,0,0,0.7586206896551724,0.8,100.0
+11867584,Southampton vs Brighton & Hove Albion,29,29,0,0,0.7724137931034484,0.8,100.0
+11867586,AFC Bournemouth vs Southampton,29,29,0,0,0.7586206896551724,0.8,100.0
+11867589,Liverpool vs Chelsea,29,29,0,0,0.710344827586207,0.8,100.0
+11867591,Norwich City vs Burnley,29,29,0,0,0.7517241379310345,0.8,100.0
+11867592,Sheffield United vs Everton,9,9,0,0,0.8,0.8,100.0
+11867595,Wolverhampton Wanderers vs Crystal Palace,5,5,0,0,0.8,0.8,100.0
+11867597,Burnley vs Brighton & Hove Albion,26,26,0,0,0.7538461538461539,0.8,100.0
+11867598,Chelsea vs Wolverhampton Wanderers,8,8,0,0,0.8,0.8,100.0
+11867599,Crystal Palace vs Tottenham Hotspur,1,1,0,0,0.8,0.8,100.0
+11867600,Everton vs AFC Bournemouth,28,28,0,0,0.75,0.8,100.0
+11867604,Southampton vs Sheffield United,26,26,0,0,0.7461538461538463,0.8,100.0
+16924597,Crystal Palace vs Southampton,30,30,0,0,0.7866666666666667,0.8,100.0
+16924601,West Bromwich Albion vs Leicester City,8,8,0,0,0.725,0.8,100.0
+16924603,Brighton & Hove Albion vs Chelsea,29,29,0,0,0.7517241379310345,0.8,100.0
+16924607,Chelsea vs Liverpool,29,29,0,0,0.7655172413793103,0.8,100.0
+16924610,Leicester City vs Burnley,29,29,0,0,0.7241379310344828,0.8,100.0
+16924613,Southampton vs Tottenham Hotspur,29,29,0,0,0.7172413793103448,0.8,100.0
+16924614,Wolverhampton Wanderers vs Manchester City,9,9,0,0,0.7111111111111111,0.8,100.0
+16924616,Burnley vs Southampton,28,28,0,0,0.7857142857142857,0.8,100.0
+16924617,Crystal Palace vs Everton,19,19,0,0,0.7578947368421053,0.8,100.0
+16924620,Manchester City vs Leicester City,2,2,0,0,0.8,0.8,100.0
+16924623,West Bromwich Albion vs Chelsea,29,29,0,0,0.7310344827586207,0.8,100.0
+16924626,Aston Villa vs Liverpool,4,4,0,0,0.6,0.6,100.0
+16924627,Chelsea vs Crystal Palace,28,28,0,0,0.75,0.8,100.0
+16924628,Everton vs Brighton & Hove Albion,11,11,0,0,0.6727272727272727,0.8,100.0
+16924629,Leeds United vs Manchester City,2,2,0,0,0.8,0.8,100.0
+16924630,Leicester City vs West Ham United,14,14,0,0,0.7714285714285715,0.8,100.0
+16924632,Newcastle United vs Burnley,27,27,0,0,0.7555555555555556,0.8,100.0
+16924633,Southampton vs West Bromwich Albion,23,23,0,0,0.773913043478261,0.8,100.0

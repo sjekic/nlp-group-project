@@ -53,7 +53,7 @@ def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SI
             agg_dict[col] = "mean"
 
     agg = tweet_df.groupby(["fixture_id", "window_5min"]).agg(agg_dict).reset_index()
-    agg.rename(columns={"text_clean": "tweet_count"}, inplace=True)
+    agg.rename(columns={"text_clean": "tweet_count", "arousal": "mean_arousal", "valence": "mean_valence"}, inplace=True)
 
     # Dominant emotion per window (majority vote)
     dominant = (
