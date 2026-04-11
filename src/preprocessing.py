@@ -113,12 +113,21 @@ NEUTRAL_EVENTS = {"Substitution", "Yellowcard", "Yellow/Red card"}
 
 
 def load_match_events(path: str) -> pd.DataFrame:
-    """Load and structure the combined match dataset.
+    """Load and structure a combined match dataset.
+
+    Compatible with both:
+      - premier_league_combined_dataset_2020.csv  (2020 season, no pressure)
+      - premier_league_combined_dataset_2024_2025.csv  (2024/25 season, has pressure)
 
     Returns a DataFrame with one row per meaningful match event,
     including period boundaries, pressure values, and event types.
     """
-    df = pd.read_csv(path, parse_dates=["kickoff_utc", "whistle_utc"])
+    parse_cols = ["kickoff_utc"]
+    # whistle_utc only exists in 2020 combined dataset
+    raw_df = pd.read_csv(path, nrows=0)
+    if "whistle_utc" in raw_df.columns:
+        parse_cols.append("whistle_utc")
+    df = pd.read_csv(path, parse_dates=parse_cols)
 
     # Normalise minute to float
     df["minute"] = pd.to_numeric(df["minute"], errors="coerce")
