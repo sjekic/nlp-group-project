@@ -196,8 +196,8 @@ def compute_window_stats(scored_df: pd.DataFrame) -> dict:
         "pct_risky":      (scored_df["ad_label"] == "AD_RISKY").mean() * 100,
         "pct_no_ad":      (scored_df["ad_label"] == "NO_AD").mean() * 100,
         "mean_receptivity": scored_df["receptivity_score"].mean(),
-        "mean_arousal":   scored_df["arousal"].mean(),
-        "mean_valence":   scored_df["valence"].mean(),
+        "mean_arousal":   scored_df["mean_arousal"].mean() if "mean_arousal" in scored_df.columns else None,
+        "mean_valence":   scored_df["mean_valence"].mean() if "mean_valence" in scored_df.columns else None,
     }
     return {k: round(v, 3) for k, v in stats.items()}
 
