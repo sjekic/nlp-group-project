@@ -1,0 +1,82 @@
+fixture_id,match,kickoff_date,kickoff_time_utc,kickoff_utc,home_team,away_team,round_id,derby,derby_name,gameweek
+11867556,AFC Bournemouth vs Tottenham Hotspur,2020-07-09,17:00:00,2020-07-09 17:00:00+00:00,AFC Bournemouth,Tottenham Hotspur,169685,0,,1
+11867561,Everton vs Southampton,2020-07-09,17:00:00,2020-07-09 17:00:00+00:00,Everton,Southampton,169685,0,,1
+11867558,Aston Villa vs Manchester United,2020-07-09,19:15:00,2020-07-09 19:15:00+00:00,Aston Villa,Manchester United,169685,0,,1
+11867571,Norwich City vs West Ham United,2020-07-11,11:30:00,2020-07-11 11:30:00+00:00,Norwich City,West Ham United,169686,0,,2
+11867574,Watford vs Newcastle United,2020-07-11,11:30:00,2020-07-11 11:30:00+00:00,Watford,Newcastle United,169686,0,,2
+11867569,Liverpool vs Burnley,2020-07-11,14:00:00,2020-07-11 14:00:00+00:00,Liverpool,Burnley,169686,0,,2
+11867572,Sheffield United vs Chelsea,2020-07-11,16:30:00,2020-07-11 16:30:00+00:00,Sheffield United,Chelsea,169686,0,,2
+11867568,Brighton & Hove Albion vs Manchester City,2020-07-11,19:00:00,2020-07-11 19:00:00+00:00,Brighton & Hove Albion,Manchester City,169686,0,,2
+11867575,Wolverhampton Wanderers vs Everton,2020-07-12,11:00:00,2020-07-12 11:00:00+00:00,Wolverhampton Wanderers,Everton,169686,0,,2
+11867567,Aston Villa vs Crystal Palace,2020-07-12,13:15:00,2020-07-12 13:15:00+00:00,Aston Villa,Crystal Palace,169686,0,,2
+11867573,Tottenham Hotspur vs Arsenal,2020-07-12,15:30:00,2020-07-12 15:30:00+00:00,Tottenham Hotspur,Arsenal,169686,1,North London derby,2
+11867566,AFC Bournemouth vs Leicester City,2020-07-12,18:00:00,2020-07-12 18:00:00+00:00,AFC Bournemouth,Leicester City,169686,0,,2
+11867570,Manchester United vs Southampton,2020-07-13,19:00:00,2020-07-13 19:00:00+00:00,Manchester United,Southampton,169686,0,,2
+11867578,Chelsea vs Norwich City,2020-07-14,19:15:00,2020-07-14 19:15:00+00:00,Chelsea,Norwich City,169687,0,,3
+11867577,Burnley vs Wolverhampton Wanderers,2020-07-15,17:00:00,2020-07-15 17:00:00+00:00,Burnley,Wolverhampton Wanderers,169687,0,,3
+11867582,Manchester City vs AFC Bournemouth,2020-07-15,17:00:00,2020-07-15 17:00:00+00:00,Manchester City,AFC Bournemouth,169687,0,,3
+11867583,Newcastle United vs Tottenham Hotspur,2020-07-15,17:00:00,2020-07-15 17:00:00+00:00,Newcastle United,Tottenham Hotspur,169687,0,,3
+11867576,Arsenal vs Liverpool,2020-07-15,19:15:00,2020-07-15 19:15:00+00:00,Arsenal,Liverpool,169687,0,,3
+11867580,Everton vs Aston Villa,2020-07-16,17:00:00,2020-07-16 17:00:00+00:00,Everton,Aston Villa,169687,0,,3
+11867581,Leicester City vs Sheffield United,2020-07-16,17:00:00,2020-07-16 17:00:00+00:00,Leicester City,Sheffield United,169687,0,,3
+11867579,Crystal Palace vs Manchester United,2020-07-16,19:15:00,2020-07-16 19:15:00+00:00,Crystal Palace,Manchester United,169687,0,,3
+11867584,Southampton vs Brighton & Hove Albion,2020-07-16,19:15:00,2020-07-16 19:15:00+00:00,Southampton,Brighton & Hove Albion,169687,0,,3
+11867585,West Ham United vs Watford,2020-07-17,19:00:00,2020-07-17 19:00:00+00:00,West Ham United,Watford,169687,0,,3
+11867591,Norwich City vs Burnley,2020-07-18,16:30:00,2020-07-18 16:30:00+00:00,Norwich City,Burnley,169688,0,,4
+11867586,AFC Bournemouth vs Southampton,2020-07-19,13:00:00,2020-07-19 13:00:00+00:00,AFC Bournemouth,Southampton,169688,0,,4
+11867593,Tottenham Hotspur vs Leicester City,2020-07-19,15:00:00,2020-07-19 15:00:00+00:00,Tottenham Hotspur,Leicester City,169688,0,,4
+11867588,Brighton & Hove Albion vs Newcastle United,2020-07-20,17:00:00,2020-07-20 17:00:00+00:00,Brighton & Hove Albion,Newcastle United,169688,0,,4
+11867592,Sheffield United vs Everton,2020-07-20,17:00:00,2020-07-20 17:00:00+00:00,Sheffield United,Everton,169688,0,,4
+11867595,Wolverhampton Wanderers vs Crystal Palace,2020-07-20,19:15:00,2020-07-20 19:15:00+00:00,Wolverhampton Wanderers,Crystal Palace,169688,0,,4
+11867594,Watford vs Manchester City,2020-07-21,17:00:00,2020-07-21 17:00:00+00:00,Watford,Manchester City,169688,0,,4
+11867587,Aston Villa vs Arsenal,2020-07-21,19:15:00,2020-07-21 19:15:00+00:00,Aston Villa,Arsenal,169688,0,,4
+11867590,Manchester United vs West Ham United,2020-07-22,17:00:00,2020-07-22 17:00:00+00:00,Manchester United,West Ham United,169688,0,,4
+11867589,Liverpool vs Chelsea,2020-07-22,19:15:00,2020-07-22 19:15:00+00:00,Liverpool,Chelsea,169688,0,,4
+11867596,Arsenal vs Watford,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Arsenal,Watford,169689,0,,5
+11867597,Burnley vs Brighton & Hove Albion,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Burnley,Brighton & Hove Albion,169689,0,,5
+11867598,Chelsea vs Wolverhampton Wanderers,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Chelsea,Wolverhampton Wanderers,169689,0,,5
+11867599,Crystal Palace vs Tottenham Hotspur,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Crystal Palace,Tottenham Hotspur,169689,0,,5
+11867600,Everton vs AFC Bournemouth,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Everton,AFC Bournemouth,169689,0,,5
+11867601,Leicester City vs Manchester United,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Leicester City,Manchester United,169689,0,,5
+11867602,Manchester City vs Norwich City,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Manchester City,Norwich City,169689,0,,5
+11867603,Newcastle United vs Liverpool,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Newcastle United,Liverpool,169689,0,,5
+11867604,Southampton vs Sheffield United,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,Southampton,Sheffield United,169689,0,,5
+11867605,West Ham United vs Aston Villa,2020-07-26,15:00:00,2020-07-26 15:00:00+00:00,West Ham United,Aston Villa,169689,0,,5
+16924598,Fulham vs Arsenal,2020-09-12,11:30:00,2020-09-12 11:30:00+00:00,Fulham,Arsenal,201963,0,,6
+16924597,Crystal Palace vs Southampton,2020-09-12,14:00:00,2020-09-12 14:00:00+00:00,Crystal Palace,Southampton,201963,0,,6
+16924599,Liverpool vs Leeds United,2020-09-12,16:30:00,2020-09-12 16:30:00+00:00,Liverpool,Leeds United,201963,0,,6
+16924602,West Ham United vs Newcastle United,2020-09-12,19:00:00,2020-09-12 19:00:00+00:00,West Ham United,Newcastle United,201963,0,,6
+16924601,West Bromwich Albion vs Leicester City,2020-09-13,13:00:00,2020-09-13 13:00:00+00:00,West Bromwich Albion,Leicester City,201963,0,,6
+16924600,Tottenham Hotspur vs Everton,2020-09-13,15:30:00,2020-09-13 15:30:00+00:00,Tottenham Hotspur,Everton,201963,0,,6
+16924604,Sheffield United vs Wolverhampton Wanderers,2020-09-14,17:00:00,2020-09-14 17:00:00+00:00,Sheffield United,Wolverhampton Wanderers,201963,0,,6
+16924603,Brighton & Hove Albion vs Chelsea,2020-09-14,19:15:00,2020-09-14 19:15:00+00:00,Brighton & Hove Albion,Chelsea,201963,0,,6
+16924608,Everton vs West Bromwich Albion,2020-09-19,11:30:00,2020-09-19 11:30:00+00:00,Everton,West Bromwich Albion,201964,0,,7
+16924609,Leeds United vs Fulham,2020-09-19,14:00:00,2020-09-19 14:00:00+00:00,Leeds United,Fulham,201964,0,,7
+16924611,Manchester United vs Crystal Palace,2020-09-19,16:30:00,2020-09-19 16:30:00+00:00,Manchester United,Crystal Palace,201964,0,,7
+16924605,Arsenal vs West Ham United,2020-09-19,19:00:00,2020-09-19 19:00:00+00:00,Arsenal,West Ham United,201964,0,,7
+16924613,Southampton vs Tottenham Hotspur,2020-09-20,11:00:00,2020-09-20 11:00:00+00:00,Southampton,Tottenham Hotspur,201964,0,,7
+16924612,Newcastle United vs Brighton & Hove Albion,2020-09-20,13:00:00,2020-09-20 13:00:00+00:00,Newcastle United,Brighton & Hove Albion,201964,0,,7
+16924607,Chelsea vs Liverpool,2020-09-20,15:30:00,2020-09-20 15:30:00+00:00,Chelsea,Liverpool,201964,0,,7
+16924610,Leicester City vs Burnley,2020-09-20,18:00:00,2020-09-20 18:00:00+00:00,Leicester City,Burnley,201964,0,,7
+16924606,Aston Villa vs Sheffield United,2020-09-21,17:00:00,2020-09-21 17:00:00+00:00,Aston Villa,Sheffield United,201964,0,,7
+16924614,Wolverhampton Wanderers vs Manchester City,2020-09-21,19:15:00,2020-09-21 19:15:00+00:00,Wolverhampton Wanderers,Manchester City,201964,0,,7
+16924615,Brighton & Hove Albion vs Manchester United,2020-09-26,11:30:00,2020-09-26 11:30:00+00:00,Brighton & Hove Albion,Manchester United,201965,0,,8
+16924617,Crystal Palace vs Everton,2020-09-26,14:00:00,2020-09-26 14:00:00+00:00,Crystal Palace,Everton,201965,0,,8
+16924623,West Bromwich Albion vs Chelsea,2020-09-26,16:30:00,2020-09-26 16:30:00+00:00,West Bromwich Albion,Chelsea,201965,0,,8
+16924616,Burnley vs Southampton,2020-09-26,19:00:00,2020-09-26 19:00:00+00:00,Burnley,Southampton,201965,0,,8
+16924621,Sheffield United vs Leeds United,2020-09-27,11:00:00,2020-09-27 11:00:00+00:00,Sheffield United,Leeds United,201965,1,Yorkshire rivalry,8
+16924622,Tottenham Hotspur vs Newcastle United,2020-09-27,13:00:00,2020-09-27 13:00:00+00:00,Tottenham Hotspur,Newcastle United,201965,0,,8
+16924620,Manchester City vs Leicester City,2020-09-27,15:30:00,2020-09-27 15:30:00+00:00,Manchester City,Leicester City,201965,0,,8
+16924624,West Ham United vs Wolverhampton Wanderers,2020-09-27,18:00:00,2020-09-27 18:00:00+00:00,West Ham United,Wolverhampton Wanderers,201965,0,,8
+16924618,Fulham vs Aston Villa,2020-09-28,16:45:00,2020-09-28 16:45:00+00:00,Fulham,Aston Villa,201965,0,,8
+16924619,Liverpool vs Arsenal,2020-09-28,19:00:00,2020-09-28 19:00:00+00:00,Liverpool,Arsenal,201965,0,,8
+16924627,Chelsea vs Crystal Palace,2020-10-03,11:30:00,2020-10-03 11:30:00+00:00,Chelsea,Crystal Palace,201966,0,,9
+16924628,Everton vs Brighton & Hove Albion,2020-10-03,14:00:00,2020-10-03 14:00:00+00:00,Everton,Brighton & Hove Albion,201966,0,,9
+16924629,Leeds United vs Manchester City,2020-10-03,16:30:00,2020-10-03 16:30:00+00:00,Leeds United,Manchester City,201966,0,,9
+16924632,Newcastle United vs Burnley,2020-10-03,19:00:00,2020-10-03 19:00:00+00:00,Newcastle United,Burnley,201966,0,,9
+16924630,Leicester City vs West Ham United,2020-10-04,11:00:00,2020-10-04 11:00:00+00:00,Leicester City,West Ham United,201966,0,,9
+16924633,Southampton vs West Bromwich Albion,2020-10-04,11:00:00,2020-10-04 11:00:00+00:00,Southampton,West Bromwich Albion,201966,0,,9
+16924625,Arsenal vs Sheffield United,2020-10-04,13:00:00,2020-10-04 13:00:00+00:00,Arsenal,Sheffield United,201966,0,,9
+16924634,Wolverhampton Wanderers vs Fulham,2020-10-04,13:00:00,2020-10-04 13:00:00+00:00,Wolverhampton Wanderers,Fulham,201966,0,,9
+16924631,Manchester United vs Tottenham Hotspur,2020-10-04,15:30:00,2020-10-04 15:30:00+00:00,Manchester United,Tottenham Hotspur,201966,0,,9
+16924626,Aston Villa vs Liverpool,2020-10-04,18:15:00,2020-10-04 18:15:00+00:00,Aston Villa,Liverpool,201966,0,,9
