@@ -81,13 +81,18 @@ def score_windows(df: pd.DataFrame) -> pd.DataFrame:
     result = df.copy()
 
     # ---- Component 1: Arousal penalty (high arousal → 1.0 penalty)
-    # mean_arousal is already ∈ [0, 1]
-    result["arousal_penalty"] = result["mean_arousal"].clip(0, 1)
+    # mean_arousal is already ∈ [0, 1]; default to 0.5 if classifier not run yet
+    if "mean_arousal" in result.columns:
+        result["arousal_penalty"] = result["mean_arousal"].clip(0, 1)
+    else:
+        result["arousal_penalty"] = 0.5  # neutral assumption
 
     # ---- Component 2: Valence penalty
-    # Valence ∈ [-1, 1]; strongly negative valence is bad for ads.
-    # We penalise proportionally to how negative the window is.
-    result["valence_penalty"] = ((-result["mean_valence"]).clip(0, 1))
+    # Valence ∈ [-1, 1]; default to 0 (neutral) if not available
+    if "mean_valence" in result.columns:
+        result["valence_penalty"] = ((-result["mean_valence"]).clip(0, 1))
+    else:
+        result["valence_penalty"] = 0.0
 
     # ---- Component 3: Pressure penalty
     result["pressure_penalty"] = _normalise_pressure(result["mean_pressure"])
