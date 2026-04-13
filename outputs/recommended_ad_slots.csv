@@ -1,139 +1,129 @@
-fixture_id,match,window_5min,period_label,receptivity_score,ad_label,dominant_emotion,mean_pressure,tweet_count,high_intensity_count,recent_high_intensity
-11867556,AFC Bournemouth vs Tottenham Hotspur,105,2nd_half,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867561,Everton vs Southampton,90,2nd_half,0.8,AD_SAFE,sadness,0.0,1,0,0
-11867561,Everton vs Southampton,100,2nd_half,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867561,Everton vs Southampton,110,2nd_half,0.8,AD_SAFE,optimism,0.0,3,0,0
-11867566,AFC Bournemouth vs Leicester City,-30,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867566,AFC Bournemouth vs Leicester City,-20,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867569,Liverpool vs Burnley,110,2nd_half,0.8,AD_SAFE,optimism,0.0,42,0,0
-11867572,Sheffield United vs Chelsea,25,1st_half,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867572,Sheffield United vs Chelsea,35,1st_half,0.6,AD_SAFE,optimism,0.0,20,0,1
-11867572,Sheffield United vs Chelsea,45,2nd_half,0.8,AD_SAFE,joy,0.0,12,0,0
-11867572,Sheffield United vs Chelsea,55,2nd_half,0.8,AD_SAFE,joy,0.0,13,0,0
-11867573,Tottenham Hotspur vs Arsenal,75,2nd_half,0.8,AD_SAFE,joy,0.0,34,0,0
-11867573,Tottenham Hotspur vs Arsenal,85,2nd_half,0.6,AD_SAFE,joy,0.0,59,0,1
-11867575,Wolverhampton Wanderers vs Everton,80,2nd_half,0.8,AD_SAFE,joy,0.0,33,0,0
-11867577,Burnley vs Wolverhampton Wanderers,-30,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867577,Burnley vs Wolverhampton Wanderers,-20,pre_match,0.8,AD_SAFE,anger,0.0,3,0,0
-11867577,Burnley vs Wolverhampton Wanderers,-10,pre_match,0.8,AD_SAFE,optimism,0.0,3,0,0
-11867577,Burnley vs Wolverhampton Wanderers,0,1st_half,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867578,Chelsea vs Norwich City,-30,pre_match,0.8,AD_SAFE,optimism,0.0,8,0,0
-11867578,Chelsea vs Norwich City,-20,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-11867578,Chelsea vs Norwich City,-10,pre_match,0.8,AD_SAFE,optimism,0.0,8,0,0
-11867578,Chelsea vs Norwich City,0,1st_half,0.8,AD_SAFE,optimism,0.0,14,0,0
-11867579,Crystal Palace vs Manchester United,55,2nd_half,0.8,AD_SAFE,joy,0.0,52,0,0
-11867579,Crystal Palace vs Manchester United,65,2nd_half,0.8,AD_SAFE,joy,0.0,115,0,0
-11867579,Crystal Palace vs Manchester United,85,2nd_half,0.8,AD_SAFE,joy,0.0,66,0,0
-11867579,Crystal Palace vs Manchester United,95,2nd_half,0.8,AD_SAFE,joy,0.0,49,0,0
-11867580,Everton vs Aston Villa,50,2nd_half,0.8,AD_SAFE,joy,0.0,33,0,0
-11867580,Everton vs Aston Villa,60,2nd_half,0.8,AD_SAFE,optimism,0.0,24,0,0
-11867580,Everton vs Aston Villa,80,2nd_half,0.8,AD_SAFE,joy,0.0,43,0,0
-11867580,Everton vs Aston Villa,110,2nd_half,0.8,AD_SAFE,optimism,0.0,60,0,0
-11867581,Leicester City vs Sheffield United,110,2nd_half,0.8,AD_SAFE,optimism,0.0,66,0,0
-11867582,Manchester City vs AFC Bournemouth,-30,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-11867582,Manchester City vs AFC Bournemouth,-20,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-11867582,Manchester City vs AFC Bournemouth,-10,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-11867582,Manchester City vs AFC Bournemouth,0,1st_half,0.8,AD_SAFE,optimism,0.0,7,0,0
-11867584,Southampton vs Brighton & Hove Albion,-30,pre_match,0.8,AD_SAFE,sadness,0.0,9,0,0
-11867584,Southampton vs Brighton & Hove Albion,-20,pre_match,0.8,AD_SAFE,optimism,0.0,8,0,0
-11867584,Southampton vs Brighton & Hove Albion,-10,pre_match,0.8,AD_SAFE,optimism,0.0,6,0,0
-11867584,Southampton vs Brighton & Hove Albion,0,1st_half,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867586,AFC Bournemouth vs Southampton,-30,pre_match,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867586,AFC Bournemouth vs Southampton,-20,pre_match,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867586,AFC Bournemouth vs Southampton,-10,pre_match,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867586,AFC Bournemouth vs Southampton,0,1st_half,0.8,AD_SAFE,optimism,0.0,7,0,0
-11867589,Liverpool vs Chelsea,-30,pre_match,0.8,AD_SAFE,anger,0.0,3,0,0
-11867589,Liverpool vs Chelsea,-20,pre_match,0.8,AD_SAFE,optimism,0.0,12,0,0
-11867589,Liverpool vs Chelsea,-10,pre_match,0.8,AD_SAFE,optimism,0.0,11,0,0
-11867589,Liverpool vs Chelsea,0,1st_half,0.8,AD_SAFE,optimism,0.0,19,0,0
-11867591,Norwich City vs Burnley,-30,pre_match,0.8,AD_SAFE,optimism,0.0,8,0,0
-11867591,Norwich City vs Burnley,-20,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-11867591,Norwich City vs Burnley,-10,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-11867591,Norwich City vs Burnley,0,1st_half,0.8,AD_SAFE,optimism,0.0,6,0,0
-11867592,Sheffield United vs Everton,70,2nd_half,0.8,AD_SAFE,optimism,0.0,20,0,0
-11867592,Sheffield United vs Everton,80,2nd_half,0.8,AD_SAFE,optimism,0.0,35,0,0
-11867592,Sheffield United vs Everton,90,2nd_half,0.8,AD_SAFE,optimism,0.0,31,0,0
-11867592,Sheffield United vs Everton,100,2nd_half,0.8,AD_SAFE,optimism,0.0,21,0,0
-11867595,Wolverhampton Wanderers vs Crystal Palace,90,2nd_half,0.8,AD_SAFE,joy,0.0,62,0,0
-11867595,Wolverhampton Wanderers vs Crystal Palace,100,2nd_half,0.8,AD_SAFE,joy,0.0,63,0,0
-11867595,Wolverhampton Wanderers vs Crystal Palace,110,2nd_half,0.8,AD_SAFE,joy,0.0,90,0,0
-11867597,Burnley vs Brighton & Hove Albion,-30,pre_match,0.8,AD_SAFE,optimism,0.0,6,0,0
-11867597,Burnley vs Brighton & Hove Albion,-20,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-11867597,Burnley vs Brighton & Hove Albion,-10,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-11867597,Burnley vs Brighton & Hove Albion,0,1st_half,0.8,AD_SAFE,optimism,0.0,6,0,0
-11867598,Chelsea vs Wolverhampton Wanderers,75,2nd_half,0.8,AD_SAFE,optimism,0.0,17,0,0
-11867598,Chelsea vs Wolverhampton Wanderers,85,2nd_half,0.8,AD_SAFE,optimism,0.0,12,0,0
-11867598,Chelsea vs Wolverhampton Wanderers,95,2nd_half,0.8,AD_SAFE,optimism,0.0,13,0,0
-11867598,Chelsea vs Wolverhampton Wanderers,105,2nd_half,0.8,AD_SAFE,optimism,0.0,16,0,0
-11867599,Crystal Palace vs Tottenham Hotspur,110,2nd_half,0.8,AD_SAFE,optimism,0.0,58,0,0
-11867600,Everton vs AFC Bournemouth,-30,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867600,Everton vs AFC Bournemouth,-20,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867600,Everton vs AFC Bournemouth,-10,pre_match,0.8,AD_SAFE,optimism,0.0,8,0,0
-11867600,Everton vs AFC Bournemouth,0,1st_half,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867604,Southampton vs Sheffield United,-30,pre_match,0.8,AD_SAFE,optimism,0.0,5,0,0
-11867604,Southampton vs Sheffield United,-20,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867604,Southampton vs Sheffield United,-10,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-11867604,Southampton vs Sheffield United,0,1st_half,0.8,AD_SAFE,optimism,0.0,2,0,0
-16924597,Crystal Palace vs Southampton,-30,pre_match,0.8,AD_SAFE,optimism,0.0,3,0,0
-16924597,Crystal Palace vs Southampton,-20,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924597,Crystal Palace vs Southampton,-10,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-16924597,Crystal Palace vs Southampton,0,1st_half,0.8,AD_SAFE,optimism,0.0,8,0,0
-16924601,West Bromwich Albion vs Leicester City,75,2nd_half,0.6,AD_SAFE,optimism,0.0,79,0,1
-16924601,West Bromwich Albion vs Leicester City,90,2nd_half,0.8,AD_SAFE,optimism,0.0,85,0,0
-16924601,West Bromwich Albion vs Leicester City,105,2nd_half,0.8,AD_SAFE,optimism,0.0,51,0,0
-16924603,Brighton & Hove Albion vs Chelsea,-30,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924603,Brighton & Hove Albion vs Chelsea,-20,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924603,Brighton & Hove Albion vs Chelsea,-10,pre_match,0.8,AD_SAFE,optimism,0.0,9,0,0
-16924603,Brighton & Hove Albion vs Chelsea,0,1st_half,0.8,AD_SAFE,optimism,0.0,21,0,0
-16924607,Chelsea vs Liverpool,-30,pre_match,0.8,AD_SAFE,optimism,0.0,3,0,0
-16924607,Chelsea vs Liverpool,-20,pre_match,0.8,AD_SAFE,optimism,0.0,6,0,0
-16924607,Chelsea vs Liverpool,-10,pre_match,0.8,AD_SAFE,optimism,0.0,6,0,0
-16924607,Chelsea vs Liverpool,0,1st_half,0.8,AD_SAFE,optimism,0.0,10,0,0
-16924610,Leicester City vs Burnley,-30,pre_match,0.8,AD_SAFE,optimism,0.0,6,0,0
-16924610,Leicester City vs Burnley,-20,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-16924610,Leicester City vs Burnley,-10,pre_match,0.8,AD_SAFE,optimism,0.0,7,0,0
-16924610,Leicester City vs Burnley,0,1st_half,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924613,Southampton vs Tottenham Hotspur,-30,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924613,Southampton vs Tottenham Hotspur,-20,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924613,Southampton vs Tottenham Hotspur,-10,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924613,Southampton vs Tottenham Hotspur,0,1st_half,0.8,AD_SAFE,optimism,0.0,1,0,0
-16924614,Wolverhampton Wanderers vs Manchester City,75,2nd_half,0.6,AD_SAFE,joy,0.0,25,0,1
-16924614,Wolverhampton Wanderers vs Manchester City,85,2nd_half,0.8,AD_SAFE,optimism,0.0,24,0,0
-16924614,Wolverhampton Wanderers vs Manchester City,105,2nd_half,0.8,AD_SAFE,optimism,0.0,21,0,0
-16924614,Wolverhampton Wanderers vs Manchester City,115,2nd_half,0.8,AD_SAFE,optimism,0.0,3,0,0
-16924616,Burnley vs Southampton,-30,pre_match,0.8,AD_SAFE,optimism,0.0,3,0,0
-16924616,Burnley vs Southampton,-20,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-16924616,Burnley vs Southampton,-10,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924616,Burnley vs Southampton,0,1st_half,0.8,AD_SAFE,optimism,0.0,8,0,0
-16924617,Crystal Palace vs Everton,35,1st_half,0.8,AD_SAFE,joy,0.0,59,0,0
-16924617,Crystal Palace vs Everton,50,2nd_half,0.8,AD_SAFE,optimism,0.0,83,0,0
-16924617,Crystal Palace vs Everton,65,2nd_half,0.8,AD_SAFE,joy,0.0,43,0,0
-16924617,Crystal Palace vs Everton,100,2nd_half,0.8,AD_SAFE,optimism,0.0,45,0,0
-16924620,Manchester City vs Leicester City,110,2nd_half,0.8,AD_SAFE,optimism,0.0,201,0,0
-16924623,West Bromwich Albion vs Chelsea,-30,pre_match,0.8,AD_SAFE,optimism,0.0,7,0,0
-16924623,West Bromwich Albion vs Chelsea,-20,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924623,West Bromwich Albion vs Chelsea,-10,pre_match,0.8,AD_SAFE,optimism,0.0,6,0,0
-16924623,West Bromwich Albion vs Chelsea,10,1st_half,0.8,AD_SAFE,joy,0.0,10,0,0
-16924626,Aston Villa vs Liverpool,25,1st_half,0.6,AD_SAFE,joy,0.0,74,0,1
-16924626,Aston Villa vs Liverpool,35,1st_half,0.6,AD_SAFE,joy,0.0,416,0,1
-16924627,Chelsea vs Crystal Palace,-30,pre_match,0.8,AD_SAFE,optimism,0.0,13,0,0
-16924627,Chelsea vs Crystal Palace,-20,pre_match,0.8,AD_SAFE,optimism,0.0,3,0,0
-16924627,Chelsea vs Crystal Palace,-10,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924627,Chelsea vs Crystal Palace,0,1st_half,0.8,AD_SAFE,optimism,0.0,7,0,0
-16924628,Everton vs Brighton & Hove Albion,40,1st_half,0.6,AD_SAFE,joy,0.0,156,0,1
-16924628,Everton vs Brighton & Hove Albion,50,2nd_half,0.6,AD_SAFE,optimism,0.0,113,0,1
-16924628,Everton vs Brighton & Hove Albion,65,2nd_half,0.8,AD_SAFE,optimism,0.0,34,0,0
-16924628,Everton vs Brighton & Hove Albion,85,2nd_half,0.8,AD_SAFE,optimism,0.0,43,0,0
-16924629,Leeds United vs Manchester City,110,2nd_half,0.8,AD_SAFE,optimism,0.0,216,0,0
-16924630,Leicester City vs West Ham United,45,2nd_half,0.8,AD_SAFE,joy,0.0,33,0,0
-16924630,Leicester City vs West Ham United,55,2nd_half,0.8,AD_SAFE,optimism,0.0,24,0,0
-16924630,Leicester City vs West Ham United,65,2nd_half,0.8,AD_SAFE,joy,0.0,26,0,0
-16924630,Leicester City vs West Ham United,75,2nd_half,0.8,AD_SAFE,joy,0.0,25,0,0
-16924632,Newcastle United vs Burnley,-30,pre_match,0.8,AD_SAFE,optimism,0.0,4,0,0
-16924632,Newcastle United vs Burnley,-20,pre_match,0.8,AD_SAFE,optimism,0.0,2,0,0
-16924632,Newcastle United vs Burnley,-10,pre_match,0.8,AD_SAFE,optimism,0.0,5,0,0
-16924632,Newcastle United vs Burnley,0,1st_half,0.8,AD_SAFE,optimism,0.0,7,0,0
-16924633,Southampton vs West Bromwich Albion,-30,pre_match,0.8,AD_SAFE,optimism,0.0,3,0,0
-16924633,Southampton vs West Bromwich Albion,-20,pre_match,0.8,AD_SAFE,optimism,0.0,1,0,0
-16924633,Southampton vs West Bromwich Albion,-10,pre_match,0.8,AD_SAFE,joy,0.0,1,0,0
-16924633,Southampton vs West Bromwich Albion,0,1st_half,0.8,AD_SAFE,optimism,0.0,3,0,0
+fixture_id,match,window_5min,period_label,receptivity_score,ad_label,dominant_emotion,mean_arousal,mean_valence,mean_pressure,tweet_count,high_intensity_count,recent_high_intensity
+11867556,AFC Bournemouth vs Tottenham Hotspur,105,2nd_half,0.7920647382736206,AD_SAFE,optimism,0.5198381543159485,0.0334161557257175,0.0,1,0,0
+11867561,Everton vs Southampton,90,2nd_half,0.747802921295166,AD_SAFE,sadness,0.241483062505722,-0.7580192685127258,1.0,1,0,0
+11867561,Everton vs Southampton,100,2nd_half,0.7547827193140983,AD_SAFE,optimism,0.4973417282104492,-0.2314029470086097,0.0,5,0,0
+11867561,Everton vs Southampton,110,2nd_half,0.7615165332953135,AD_SAFE,optimism,0.5415119131406149,-0.1093935072422027,0.0,3,0,0
+11867566,AFC Bournemouth vs Leicester City,-30,pre_match,0.7468754529953003,AD_SAFE,optimism,0.6328113675117493,0.0081667862832546,0.0,1,0,0
+11867566,AFC Bournemouth vs Leicester City,-20,pre_match,0.7085716128349304,AD_SAFE,optimism,0.6053053736686707,-0.2465311884880066,0.0,1,0,0
+11867569,Liverpool vs Burnley,110,2nd_half,0.7839526647613162,AD_SAFE,optimism,0.5401183380967095,0.0379492949383954,0.0,42,0,0
+11867572,Sheffield United vs Chelsea,25,1st_half,0.7912296271324157,AD_SAFE,optimism,0.5219259321689605,0.0509501658380031,0.0,5,0,0
+11867572,Sheffield United vs Chelsea,40,1st_half,0.7799240614686693,AD_SAFE,joy,0.5501898463283267,0.3847949532791972,0.0,14,0,0
+11867572,Sheffield United vs Chelsea,50,2nd_half,0.7718928903341293,AD_SAFE,joy,0.5702677741646767,0.2393915726958463,0.0,24,0,0
+11867573,Tottenham Hotspur vs Arsenal,75,2nd_half,0.7702815024712506,AD_SAFE,joy,0.5642962438218734,0.1017494322184254,1.0,34,0,0
+11867575,Wolverhampton Wanderers vs Everton,80,2nd_half,0.7884843782945112,AD_SAFE,joy,0.5287890542637218,0.2732041579332541,0.0,33,0,0
+11867577,Burnley vs Wolverhampton Wanderers,5,1st_half,0.7938900096714496,AD_SAFE,sadness,0.4750784456729889,-0.0803930602967738,0.0,5,0,0
+11867577,Burnley vs Wolverhampton Wanderers,35,1st_half,0.7905772672966123,AD_SAFE,optimism,0.5227912068367004,-0.0015312498435377,0.0,2,0,0
+11867577,Burnley vs Wolverhampton Wanderers,60,2nd_half,0.7957831978797912,AD_SAFE,optimism,0.5105420053005219,0.0210347777853409,0.0,3,0,0
+11867577,Burnley vs Wolverhampton Wanderers,105,2nd_half,0.7984908223152161,AD_SAFE,joy,0.5037729442119598,0.3732717335224151,0.0,2,0,0
+11867578,Chelsea vs Norwich City,25,1st_half,0.8051246265570322,AD_SAFE,joy,0.4871884336074193,0.1080749863758683,0.0,12,0,0
+11867578,Chelsea vs Norwich City,40,1st_half,0.7891149617731571,AD_SAFE,joy,0.5272125955671072,0.0478847669437527,0.0,16,0,0
+11867578,Chelsea vs Norwich City,70,2nd_half,0.7974248564720154,AD_SAFE,optimism,0.5034378588199615,0.0665336783975362,0.3,5,0,0
+11867578,Chelsea vs Norwich City,105,2nd_half,0.7880136698484421,AD_SAFE,optimism,0.5299658253788948,0.0856184172444045,0.0,8,0,0
+11867579,Crystal Palace vs Manchester United,55,2nd_half,0.7799319501106555,AD_SAFE,joy,0.5501701247233611,0.4474261391621369,0.0,52,0,0
+11867579,Crystal Palace vs Manchester United,85,2nd_half,0.7773462709152337,AD_SAFE,joy,0.5566343227119157,0.5245579310523515,0.0,66,0,0
+11867579,Crystal Palace vs Manchester United,95,2nd_half,0.7849635753096367,AD_SAFE,joy,0.5375910617259084,0.2754566094514971,0.0,49,0,0
+11867579,Crystal Palace vs Manchester United,105,2nd_half,0.7730901366099715,AD_SAFE,sadness,0.5547813326120377,-0.024986651726067,0.0,32,0,0
+11867580,Everton vs Aston Villa,50,2nd_half,0.7830821080641313,AD_SAFE,joy,0.5422947298396718,0.0290472534569827,0.0,33,0,0
+11867580,Everton vs Aston Villa,80,2nd_half,0.7821994279706201,AD_SAFE,joy,0.5445014300734498,0.0696196913675859,0.0,43,0,0
+11867580,Everton vs Aston Villa,100,2nd_half,0.7823512870757307,AD_SAFE,joy,0.5441217823106734,0.3652462666151953,0.0,61,0,0
+11867580,Everton vs Aston Villa,110,2nd_half,0.7669292046626409,AD_SAFE,optimism,0.5826769883433978,0.1275713747522483,0.0,60,0,0
+11867581,Leicester City vs Sheffield United,110,2nd_half,0.7441241865497872,AD_SAFE,optimism,0.593590953133323,-0.0921971609844176,0.0,66,0,0
+11867582,Manchester City vs AFC Bournemouth,-20,pre_match,0.8118248879909515,AD_SAFE,optimism,0.4704377800226211,0.0315790451131761,0.0,4,0,0
+11867582,Manchester City vs AFC Bournemouth,65,2nd_half,0.7868291085898876,AD_SAFE,optimism,0.5185742527246475,-0.0107059516012668,0.8999999999999999,4,0,0
+11867582,Manchester City vs AFC Bournemouth,75,2nd_half,0.7858163703918457,AD_SAFE,optimism,0.5264590740203857,0.0299658741801977,0.8999999999999999,15,0,0
+11867582,Manchester City vs AFC Bournemouth,95,2nd_half,0.7920848557725548,AD_SAFE,optimism,0.5165303349494934,-0.0065150512382387,0.0,2,0,0
+11867584,Southampton vs Brighton & Hove Albion,0,1st_half,0.7996726141870022,AD_SAFE,optimism,0.4686629593372345,-0.06431101039052,0.0,5,0,0
+11867584,Southampton vs Brighton & Hove Albion,30,1st_half,0.791052906960249,AD_SAFE,optimism,0.4970343510309855,-0.0506667631367842,0.0,3,0,0
+11867584,Southampton vs Brighton & Hove Albion,40,1st_half,0.7830849811434746,AD_SAFE,optimism,0.5135053396224976,-0.0575644150376319,0.0,1,0,0
+11867584,Southampton vs Brighton & Hove Albion,105,2nd_half,0.7990074714024862,AD_SAFE,sadness,0.3361669977506001,-0.3326286474863688,0.0,3,0,0
+11867586,AFC Bournemouth vs Southampton,15,1st_half,0.8257252097129821,AD_SAFE,joy,0.4356869757175445,0.12481090426445,0.0,1,0,0
+11867586,AFC Bournemouth vs Southampton,75,2nd_half,0.7754445817152659,AD_SAFE,optimism,0.5483885457118353,0.1556256708378593,1.3,6,0,0
+11867586,AFC Bournemouth vs Southampton,90,2nd_half,0.7824670169830322,AD_SAFE,joy,0.5308324575424195,0.1526913806796073,1.3,5,0,0
+11867586,AFC Bournemouth vs Southampton,110,2nd_half,0.8060150710244973,AD_SAFE,joy,0.4849623224387566,0.1006506895646452,0.0,24,0,0
+11867589,Liverpool vs Chelsea,5,1st_half,0.7804958807097541,AD_SAFE,optimism,0.5487602982256148,0.0302925124350521,0.0,18,0,0
+11867589,Liverpool vs Chelsea,15,1st_half,0.7808836900762149,AD_SAFE,optimism,0.4876049331256321,-0.120371683367661,0.0,7,0,0
+11867589,Liverpool vs Chelsea,90,2nd_half,0.7789641567638942,AD_SAFE,optimism,0.5525896080902645,0.26951727445703,0.0,28,0,0
+11867589,Liverpool vs Chelsea,105,2nd_half,0.7815616543094317,AD_SAFE,optimism,0.5460958642264208,0.1131503470242023,0.0,24,0,0
+11867591,Norwich City vs Burnley,0,1st_half,0.8022979614324868,AD_SAFE,optimism,0.4936143904924392,-0.0012814118526875,0.0,6,0,0
+11867591,Norwich City vs Burnley,25,1st_half,0.791544771194458,AD_SAFE,optimism,0.521138072013855,0.0335601642727851,0.0,1,0,0
+11867591,Norwich City vs Burnley,65,2nd_half,0.8018864750862121,AD_SAFE,optimism,0.4952838122844696,0.0477828811854124,0.0,6,0,0
+11867591,Norwich City vs Burnley,100,2nd_half,0.7968558181415905,AD_SAFE,optimism,0.5078604546460238,0.0417234397239306,0.0,11,0,0
+11867592,Sheffield United vs Everton,70,2nd_half,0.776696211695671,AD_SAFE,optimism,0.5582594707608223,0.2593080375809223,0.0,20,0,0
+11867592,Sheffield United vs Everton,80,2nd_half,0.7734573398419788,AD_SAFE,optimism,0.554188643183027,-0.0123360144240515,0.6,35,0,0
+11867592,Sheffield United vs Everton,90,2nd_half,0.7814126224527436,AD_SAFE,optimism,0.5322977929346023,-0.0283413018670774,0.0,31,0,0
+11867592,Sheffield United vs Everton,100,2nd_half,0.7768736930120559,AD_SAFE,optimism,0.5578157674698603,0.2187579302560715,0.0,21,0,0
+11867595,Wolverhampton Wanderers vs Crystal Palace,95,2nd_half,0.7920822099997447,AD_SAFE,joy,0.5197944750006382,0.2276413905888031,0.0,78,0,0
+11867595,Wolverhampton Wanderers vs Crystal Palace,110,2nd_half,0.7840535065862868,AD_SAFE,joy,0.5398662335342831,0.1207013249604238,0.0,90,0,0
+11867597,Burnley vs Brighton & Hove Albion,0,1st_half,0.7866173148155212,AD_SAFE,optimism,0.5334567129611969,0.0273805626978476,0.0,6,0,0
+11867597,Burnley vs Brighton & Hove Albion,15,1st_half,0.7811017990112304,AD_SAFE,joy,0.5472455024719238,0.2682418152689934,0.0,3,0,0
+11867597,Burnley vs Brighton & Hove Albion,75,2nd_half,0.7846493233203888,AD_SAFE,joy,0.532376691699028,0.1688459292054176,0.6,2,0,0
+11867597,Burnley vs Brighton & Hove Albion,95,2nd_half,0.7917653958002726,AD_SAFE,joy,0.5205865104993185,0.2714071311056614,0.0,6,0,0
+11867598,Chelsea vs Wolverhampton Wanderers,75,2nd_half,0.7779457400378058,AD_SAFE,optimism,0.5491356499054852,0.0344702763592495,0.6,17,0,0
+11867598,Chelsea vs Wolverhampton Wanderers,90,2nd_half,0.7885256514549255,AD_SAFE,optimism,0.5186858713626862,0.0291934594511985,1.0,10,0,0
+11867598,Chelsea vs Wolverhampton Wanderers,105,2nd_half,0.7814106151927263,AD_SAFE,optimism,0.5391861088573933,-0.0145747063215821,0.0,16,0,0
+11867599,Crystal Palace vs Tottenham Hotspur,110,2nd_half,0.7583645667880774,AD_SAFE,optimism,0.5522133142783724,-0.1037505375028684,0.0,58,0,0
+11867600,Everton vs AFC Bournemouth,-25,pre_match,0.7733938856050372,AD_SAFE,optimism,0.5404946804046631,-0.0520412111654877,0.0,2,0,0
+11867600,Everton vs AFC Bournemouth,55,2nd_half,0.7811513148988996,AD_SAFE,joy,0.5411217127527509,0.1650434389178242,0.6,7,0,0
+11867600,Everton vs AFC Bournemouth,75,2nd_half,0.7750064970652262,AD_SAFE,optimism,0.5524837573369344,0.0190403262774149,1.0,3,0,0
+11867600,Everton vs AFC Bournemouth,100,2nd_half,0.7955439408620198,AD_SAFE,optimism,0.5111401478449503,0.0556126476989852,0.0,9,0,0
+11867604,Southampton vs Sheffield United,-10,pre_match,0.785220456123352,AD_SAFE,optimism,0.5166996717453003,-0.0404983758926391,0.0,1,0,0
+11867604,Southampton vs Sheffield United,15,1st_half,0.7940546631813049,AD_SAFE,optimism,0.5146941542625427,-0.0003383755683898,0.0,1,0,0
+11867604,Southampton vs Sheffield United,45,2nd_half,0.78941444568336,AD_SAFE,optimism,0.5113045573234558,-0.0303186569362878,0.0,1,0,0
+11867604,Southampton vs Sheffield United,100,2nd_half,0.7809305715560912,AD_SAFE,optimism,0.5476735711097718,5.906131118531902e-05,0.0,5,0,0
+16924597,Crystal Palace vs Southampton,5,1st_half,0.7907720744609833,AD_SAFE,optimism,0.5230698138475418,0.0232053945461909,0.0,6,0,0
+16924597,Crystal Palace vs Southampton,25,1st_half,0.7933089554309845,AD_SAFE,optimism,0.5167276114225388,0.0724074027966708,0.0,16,0,0
+16924597,Crystal Palace vs Southampton,75,2nd_half,0.7911115362723669,AD_SAFE,optimism,0.5192211593190829,0.0537557844460631,0.3,24,0,0
+16924597,Crystal Palace vs Southampton,110,2nd_half,0.7862527872946474,AD_SAFE,optimism,0.5218937065332167,-0.0249486504603297,0.0,31,0,0
+16924601,West Bromwich Albion vs Leicester City,90,2nd_half,0.7825175309181214,AD_SAFE,optimism,0.5437061727046967,0.1022137522752232,0.0,85,0,0
+16924601,West Bromwich Albion vs Leicester City,105,2nd_half,0.7730574932022422,AD_SAFE,optimism,0.5618683876944524,-0.0109757585998843,0.0,51,0,0
+16924603,Brighton & Hove Albion vs Chelsea,-25,pre_match,0.7986021591557397,AD_SAFE,sadness,0.491894072956509,-0.0232010583082834,0.0,9,0,0
+16924603,Brighton & Hove Albion vs Chelsea,10,1st_half,0.7893404442816973,AD_SAFE,optimism,0.5180867552757263,-0.0171242680400609,0.0,5,0,0
+16924603,Brighton & Hove Albion vs Chelsea,40,1st_half,0.8044824997584025,AD_SAFE,joy,0.4887937506039937,0.172877599298954,0.0,15,0,0
+16924603,Brighton & Hove Albion vs Chelsea,100,2nd_half,0.7959345241387685,AD_SAFE,optimism,0.5101636896530787,0.0212738271802663,0.0,6,0,0
+16924607,Chelsea vs Liverpool,15,1st_half,0.7876864249507586,AD_SAFE,optimism,0.4454122434059779,-0.1707433884342511,0.0,6,0,0
+16924607,Chelsea vs Liverpool,30,1st_half,0.7888778617978096,AD_SAFE,optimism,0.4817494213581085,-0.0921118482947349,0.0,5,0,0
+16924607,Chelsea vs Liverpool,65,2nd_half,0.7920548480850729,AD_SAFE,optimism,0.4954150102355263,-0.0488957391035827,0.0,11,0,0
+16924607,Chelsea vs Liverpool,95,2nd_half,0.7861660818258921,AD_SAFE,joy,0.5345847954352697,0.3158866342984968,0.0,18,0,0
+16924610,Leicester City vs Burnley,-10,pre_match,0.7912507312638419,AD_SAFE,optimism,0.5218731718403953,0.0121691469103098,0.0,7,0,0
+16924610,Leicester City vs Burnley,40,1st_half,0.7916547431593356,AD_SAFE,optimism,0.5178631421016611,0.0417157814878484,0.3,23,0,0
+16924610,Leicester City vs Burnley,95,2nd_half,0.7836054430932415,AD_SAFE,optimism,0.5409863922668963,0.0824932926144375,0.0,98,0,0
+16924610,Leicester City vs Burnley,105,2nd_half,0.7822021829115378,AD_SAFE,optimism,0.5444945427211555,0.008296850036729,0.0,37,0,0
+16924613,Southampton vs Tottenham Hotspur,-15,pre_match,0.7903210377320647,AD_SAFE,optimism,0.5141512751579285,-0.0200922610238193,0.0,2,0,0
+16924613,Southampton vs Tottenham Hotspur,-5,pre_match,0.7902431428432465,AD_SAFE,optimism,0.5243921428918839,0.0551577997393906,0.0,4,0,0
+16924613,Southampton vs Tottenham Hotspur,5,1st_half,0.7862578500409921,AD_SAFE,optimism,0.5220104257265726,-0.0046898983418941,1.0,3,0,0
+16924613,Southampton vs Tottenham Hotspur,100,2nd_half,0.8060160558670759,AD_SAFE,optimism,0.4816638380289078,-0.0065920446068048,0.0,4,0,0
+16924614,Wolverhampton Wanderers vs Manchester City,85,2nd_half,0.7735433172859872,AD_SAFE,optimism,0.5385609877606233,-0.0351614380488172,1.0,24,0,0
+16924614,Wolverhampton Wanderers vs Manchester City,105,2nd_half,0.7910664294447218,AD_SAFE,optimism,0.5017228012993222,-0.0412222501777467,0.0,21,0,0
+16924614,Wolverhampton Wanderers vs Manchester City,115,2nd_half,0.7753623195613424,AD_SAFE,optimism,0.5328331788380941,-0.0575220445170998,0.0,3,0,0
+16924616,Burnley vs Southampton,-5,pre_match,0.7903374338150024,AD_SAFE,sadness,0.4335687696933746,-0.1811752915382385,0.0,5,0,0
+16924616,Burnley vs Southampton,30,1st_half,0.7909452199935914,AD_SAFE,optimism,0.5226369500160217,0.1077978629618883,0.0,3,0,0
+16924616,Burnley vs Southampton,95,2nd_half,0.7927118878811599,AD_SAFE,joy,0.438055220991373,-0.1603301186114549,0.0,4,0,0
+16924616,Burnley vs Southampton,105,2nd_half,0.8057238360246022,AD_SAFE,joy,0.4856904099384944,0.2778964738051096,0.0,6,0,0
+16924617,Crystal Palace vs Everton,35,1st_half,0.7793915360660877,AD_SAFE,joy,0.5515211598347809,0.4346641101953337,0.0,59,0,0
+16924617,Crystal Palace vs Everton,75,2nd_half,0.7805906526733847,AD_SAFE,joy,0.5425233683165382,0.1278026319821091,0.6,34,0,0
+16924617,Crystal Palace vs Everton,100,2nd_half,0.7870851649178399,AD_SAFE,optimism,0.5322870877054002,0.0319533103870021,0.0,45,0,0
+16924617,Crystal Palace vs Everton,110,2nd_half,0.7868067984195317,AD_SAFE,joy,0.5329830039511708,0.1400628076482783,0.0,68,0,0
+16924620,Manchester City vs Leicester City,115,2nd_half,0.7836742063984274,AD_SAFE,optimism,0.5251122117042542,-0.0314045445993542,0.0,2,0,0
+16924623,West Bromwich Albion vs Chelsea,15,1st_half,0.7968905846277873,AD_SAFE,joy,0.5077735384305319,0.2649296894669533,0.0,12,0,0
+16924623,West Bromwich Albion vs Chelsea,45,2nd_half,0.7908935721107891,AD_SAFE,joy,0.5167660697230271,0.2515302277170121,0.6,28,0,0
+16924623,West Bromwich Albion vs Chelsea,80,2nd_half,0.7880413687825203,AD_SAFE,optimism,0.5198965780436993,0.1937387688085436,1.0,8,0,0
+16924623,West Bromwich Albion vs Chelsea,105,2nd_half,0.7898902991786599,AD_SAFE,optimism,0.5198868438601494,-0.0107748163864016,0.0,8,0,0
+16924627,Chelsea vs Crystal Palace,-30,pre_match,0.7907273815228388,AD_SAFE,optimism,0.5231815461929028,0.1484474376417123,0.0,13,0,0
+16924627,Chelsea vs Crystal Palace,-20,pre_match,0.7945644934972127,AD_SAFE,optimism,0.5135887662569681,0.0208926703780889,0.0,3,0,0
+16924627,Chelsea vs Crystal Palace,-5,pre_match,0.8017997705688079,AD_SAFE,optimism,0.4824511234958966,-0.026098900164167,0.0,6,0,0
+16924627,Chelsea vs Crystal Palace,90,2nd_half,0.7874675330093929,AD_SAFE,joy,0.5313311674765178,0.2039928717405668,0.0,70,0,0
+16924628,Everton vs Brighton & Hove Albion,60,2nd_half,0.7748579222981523,AD_SAFE,optimism,0.5628551942546193,0.0343418614030247,0.0,41,0,0
+16924628,Everton vs Brighton & Hove Albion,80,2nd_half,0.781975799314012,AD_SAFE,optimism,0.5420605017149702,0.0754017868336845,0.3,47,0,0
+16924629,Leeds United vs Manchester City,110,2nd_half,0.78130600515891,AD_SAFE,optimism,0.5467349871027248,0.0993931112591074,0.0,216,0,0
+16924630,Leicester City vs West Ham United,45,2nd_half,0.7830665595603712,AD_SAFE,joy,0.542333601099072,0.0668316433827082,0.0,33,0,0
+16924630,Leicester City vs West Ham United,75,2nd_half,0.7839242806434632,AD_SAFE,joy,0.5401892983913421,0.2614897642657161,0.0,25,0,0
+16924630,Leicester City vs West Ham United,90,2nd_half,0.8017367822783334,AD_SAFE,joy,0.4956580443041665,0.2083999700844288,0.0,28,0,0
+16924630,Leicester City vs West Ham United,105,2nd_half,0.7894334176945133,AD_SAFE,joy,0.526416455763717,0.0970600848194471,0.0,86,0,0
+16924632,Newcastle United vs Burnley,25,1st_half,0.7944046139717102,AD_SAFE,joy,0.5139884650707245,0.4421878159046173,0.0,2,0,0
+16924632,Newcastle United vs Burnley,55,2nd_half,0.7998796570777893,AD_SAFE,optimism,0.4973008573055267,0.040885480493307,0.3,5,0,0
+16924632,Newcastle United vs Burnley,100,2nd_half,0.802409541606903,AD_SAFE,sadness,0.4939761459827423,0.4159524589776993,0.0,2,0,0
+16924632,Newcastle United vs Burnley,110,2nd_half,0.8062561273574829,AD_SAFE,joy,0.4843596816062927,0.368893101811409,0.0,2,0,0
+16924633,Southampton vs West Bromwich Albion,-20,pre_match,0.7859308511018753,AD_SAFE,optimism,0.5199907422065735,-0.0303642600774765,0.0,1,0,0
+16924633,Southampton vs West Bromwich Albion,-10,pre_match,0.7887547731399536,AD_SAFE,joy,0.528113067150116,0.4305751025676727,0.0,1,0,0
+16924633,Southampton vs West Bromwich Albion,10,1st_half,0.7873293064534664,AD_SAFE,optimism,0.5186323821544647,-0.0260887034237384,0.0,2,0,0
+16924633,Southampton vs West Bromwich Albion,75,2nd_half,0.7908463966101408,AD_SAFE,optimism,0.5091498494148254,-0.0274683181196451,0.0,1,0,0
