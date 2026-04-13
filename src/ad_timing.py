@@ -53,8 +53,8 @@ W_PRESSURE = 0.20
 W_EVENT    = 0.20
 
 # Thresholds
-SAFE_THRESHOLD  = 0.60
-RISKY_THRESHOLD = 0.40
+SAFE_THRESHOLD  = 0.75
+RISKY_THRESHOLD = 0.55
 
 # Pressure normalisation: values above this cap are treated as maximum pressure
 PRESSURE_CAP = 50.0
