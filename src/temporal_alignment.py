@@ -23,6 +23,16 @@ import numpy as np
 
 WINDOW_SIZE = 5   # minutes
 
+# All 28 GoEmotions labels -- used to detect emotion columns in the DataFrame
+GO_EMOTIONS_LABELS = {
+    "admiration", "amusement", "anger", "annoyance", "approval",
+    "caring", "confusion", "curiosity", "desire", "disappointment",
+    "disapproval", "disgust", "embarrassment", "excitement", "fear",
+    "gratitude", "grief", "joy", "love", "nervousness", "optimism",
+    "pride", "realization", "relief", "remorse", "sadness",
+    "surprise", "neutral",
+}
+
 
 def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SIZE) -> pd.DataFrame:
     """Aggregate tweet-level emotion predictions into per-window averages.
@@ -30,7 +40,7 @@ def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SI
     Parameters
     ----------
     tweet_df : DataFrame
-        Output of EmotionClassifier.predict_df — must contain:
+        Output of EmotionClassifier.predict_df -- must contain:
         fixture_id, window_5min, arousal, valence, dominant_emotion,
         and one column per emotion label.
     window_size : int
@@ -39,11 +49,10 @@ def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SI
     Returns
     -------
     DataFrame with one row per (fixture_id, window_5min):
-        tweet_count, mean_arousal, mean_valence, dominant_emotion_mode,
-        + mean probability for each emotion label.
+        tweet_count, mean_arousal, mean_valence, dominant_emotion (mode),
+        + mean probability for each emotion label present.
     """
-    emotion_cols = [c for c in tweet_df.columns if c in
-                    {"anger", "fear", "joy", "sadness", "surprise", "disgust", "optimism"}]
+    emotion_cols = [c for c in tweet_df.columns if c in GO_EMOTIONS_LABELS]
 
     agg_dict = {"text_clean": "count"}   # tweet count
 
@@ -52,9 +61,16 @@ def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SI
             agg_dict[col] = "mean"
 
     agg = tweet_df.groupby(["fixture_id", "window_5min"]).agg(agg_dict).reset_index()
-    agg.rename(columns={"text_clean": "tweet_count", "arousal": "mean_arousal", "valence": "mean_valence"}, inplace=True)
+    agg.rename(
+        columns={
+            "text_clean": "tweet_count",
+            "arousal": "mean_arousal",
+            "valence": "mean_valence",
+        },
+        inplace=True,
+    )
 
-    # Dominant emotion per window (majority vote)
+    # Dominant emotion per window (majority vote across tweets)
     dominant = (
         tweet_df.groupby(["fixture_id", "window_5min"])["dominant_emotion"]
         .agg(lambda x: x.value_counts().index[0])
@@ -91,18 +107,16 @@ def attach_match_events(
     """
     # 1. Attach pressure features
     merged = window_df.merge(pressure_windows, on=["fixture_id", "window_5min"], how="left")
-    merged["mean_pressure"]      = merged["mean_pressure"].fillna(0.0)
-    merged["max_pressure"]       = merged["max_pressure"].fillna(0.0)
+    merged["mean_pressure"]        = merged["mean_pressure"].fillna(0.0)
+    merged["max_pressure"]         = merged["max_pressure"].fillna(0.0)
     merged["high_intensity_count"] = merged["high_intensity_count"].fillna(0).astype(int)
 
-    # 2. Flag recent high-intensity events — vectorised, not row-wise apply()
+    # 2. Flag recent high-intensity events -- vectorised
     hi_events = match_df[match_df["is_high_intensity"]].copy()
     hi_events["window_5min"] = (
         (hi_events["effective_minute"] // WINDOW_SIZE).astype(int) * WINDOW_SIZE
     )
 
-    # Build a lookup: for each (fixture_id, window) that HAD a hi event,
-    # flag all windows within [w - lookback*WINDOW_SIZE, w] as affected.
     hi_lookup_rows = []
     for offset in range(lookback_windows + 1):
         shifted = hi_events[["fixture_id", "window_5min"]].copy()
@@ -118,7 +132,7 @@ def attach_match_events(
     merged = merged.merge(hi_lookup, on=["fixture_id", "window_5min"], how="left")
     merged["recent_high_intensity"] = merged["recent_high_intensity"].fillna(0).astype(int)
 
-    # 3. Attach period label — vectorised with merge_asof
+    # 3. Attach period label -- vectorised with merge_asof
     period_map = (
         match_df[match_df["row_type"] == "period"]
         [["fixture_id", "period_label", "effective_minute"]]
@@ -140,7 +154,7 @@ def attach_match_events(
     else:
         merged_sorted["period_label"] = "pre_match"
 
-    # 4. Attach match metadata (teams, kickoff)
+    # 4. Attach match metadata
     meta_cols = [
         "fixture_id", "match", "kickoff_utc", "home_team", "away_team",
         "derby", "home_goals_final", "away_goals_final",
