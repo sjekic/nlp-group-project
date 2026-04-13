@@ -43,11 +43,10 @@ def aggregate_tweet_windows(tweet_df: pd.DataFrame, window_size: int = WINDOW_SI
         + mean probability for each emotion label.
     """
     emotion_cols = [c for c in tweet_df.columns if c in
-                    {"anger", "fear", "joy", "sadness", "surprise", "disgust"}]
+                    {"anger", "fear", "joy", "sadness", "surprise", "disgust", "optimism"}]
 
     agg_dict = {"text_clean": "count"}   # tweet count
 
-    # Only aggregate arousal/valence if the classifier has been run
     for col in ["arousal", "valence"] + emotion_cols:
         if col in tweet_df.columns:
             agg_dict[col] = "mean"
@@ -84,7 +83,7 @@ def attach_match_events(
         Output of preprocessing.build_pressure_windows.
     lookback_windows : int
         How many preceding 5-min windows to include when flagging
-        recent high-intensity events (default = 1 → last 5 min).
+        recent high-intensity events (default = 1 -> last 5 min).
 
     Returns
     -------
@@ -92,50 +91,65 @@ def attach_match_events(
     """
     # 1. Attach pressure features
     merged = window_df.merge(pressure_windows, on=["fixture_id", "window_5min"], how="left")
-    merged["mean_pressure"] = merged["mean_pressure"].fillna(0.0)
-    merged["max_pressure"] = merged["max_pressure"].fillna(0.0)
+    merged["mean_pressure"]      = merged["mean_pressure"].fillna(0.0)
+    merged["max_pressure"]       = merged["max_pressure"].fillna(0.0)
     merged["high_intensity_count"] = merged["high_intensity_count"].fillna(0).astype(int)
 
-    # 2. Flag whether a high-intensity event occurred in THIS or the
-    #    preceding window(s) — fans need a few minutes to calm down.
+    # 2. Flag recent high-intensity events — vectorised, not row-wise apply()
     hi_events = match_df[match_df["is_high_intensity"]].copy()
-    hi_events["window_5min"] = (hi_events["effective_minute"] // WINDOW_SIZE).astype(int) * WINDOW_SIZE
-
-    def _recent_hi(row, hi_df, lookback):
-        """Return 1 if any high-intensity event fell within lookback windows."""
-        target_windows = [row["window_5min"] - i * WINDOW_SIZE for i in range(lookback + 1)]
-        mask = (
-            (hi_df["fixture_id"] == row["fixture_id"]) &
-            (hi_df["window_5min"].isin(target_windows))
-        )
-        return int(hi_df[mask].shape[0] > 0)
-
-    merged["recent_high_intensity"] = merged.apply(
-        lambda r: _recent_hi(r, hi_events, lookback_windows), axis=1
+    hi_events["window_5min"] = (
+        (hi_events["effective_minute"] // WINDOW_SIZE).astype(int) * WINDOW_SIZE
     )
 
-    # 3. Attach period label (1st half, 2nd half, extra time)
+    # Build a lookup: for each (fixture_id, window) that HAD a hi event,
+    # flag all windows within [w - lookback*WINDOW_SIZE, w] as affected.
+    hi_lookup_rows = []
+    for offset in range(lookback_windows + 1):
+        shifted = hi_events[["fixture_id", "window_5min"]].copy()
+        shifted["window_5min"] = shifted["window_5min"] + offset * WINDOW_SIZE
+        hi_lookup_rows.append(shifted)
+
+    hi_lookup = (
+        pd.concat(hi_lookup_rows, ignore_index=True)
+        .drop_duplicates()
+        .assign(recent_high_intensity=1)
+    )
+
+    merged = merged.merge(hi_lookup, on=["fixture_id", "window_5min"], how="left")
+    merged["recent_high_intensity"] = merged["recent_high_intensity"].fillna(0).astype(int)
+
+    # 3. Attach period label — vectorised with merge_asof
     period_map = (
         match_df[match_df["row_type"] == "period"]
         [["fixture_id", "period_label", "effective_minute"]]
         .dropna(subset=["period_label"])
+        .rename(columns={"effective_minute": "window_5min"})
+        .sort_values(["fixture_id", "window_5min"])
     )
-    # For each window assign the period that started most recently
-    def _get_period(row, pm):
-        fixture_periods = pm[pm["fixture_id"] == row["fixture_id"]]
-        past = fixture_periods[fixture_periods["effective_minute"] <= row["window_5min"]]
-        if past.empty:
-            return "pre_match"
-        return past.sort_values("effective_minute").iloc[-1]["period_label"]
 
-    merged["period_label"] = merged.apply(lambda r: _get_period(r, period_map), axis=1)
+    merged_sorted = merged.sort_values(["fixture_id", "window_5min"])
+    if not period_map.empty:
+        merged_sorted = pd.merge_asof(
+            merged_sorted,
+            period_map[["fixture_id", "window_5min", "period_label"]],
+            on="window_5min",
+            by="fixture_id",
+            direction="backward",
+        )
+        merged_sorted["period_label"] = merged_sorted["period_label"].fillna("pre_match")
+    else:
+        merged_sorted["period_label"] = "pre_match"
 
     # 4. Attach match metadata (teams, kickoff)
-    meta = match_df[["fixture_id", "match", "kickoff_utc", "home_team", "away_team", "derby",
-                      "home_goals_final", "away_goals_final"]].drop_duplicates("fixture_id")
-    merged = merged.merge(meta, on="fixture_id", how="left")
+    meta_cols = [
+        "fixture_id", "match", "kickoff_utc", "home_team", "away_team",
+        "derby", "home_goals_final", "away_goals_final",
+    ]
+    available_meta = [c for c in meta_cols if c in match_df.columns]
+    meta = match_df[available_meta].drop_duplicates("fixture_id")
+    result = merged_sorted.merge(meta, on="fixture_id", how="left")
 
-    return merged
+    return result
 
 
 def build_aligned_windows(
@@ -158,6 +172,8 @@ def build_aligned_windows(
     """
     window_df = aggregate_tweet_windows(tweet_df)
     aligned   = attach_match_events(window_df, match_df, pressure_windows)
-    print(f"[build_aligned_windows] {len(aligned):,} windows across "
-          f"{aligned['fixture_id'].nunique()} matches.")
+    print(
+        f"[build_aligned_windows] {len(aligned):,} windows across "
+        f"{aligned['fixture_id'].nunique()} matches."
+    )
     return aligned

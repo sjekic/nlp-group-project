@@ -5,29 +5,29 @@ Receptivity scoring and ad-slot recommendation policy.
 
 Design
 ------
-A single RECEPTIVITY SCORE ∈ [0, 1] is computed per 5-minute window.
+A single RECEPTIVITY SCORE in [0, 1] is computed per 5-minute window.
 Higher = more suitable for showing an ad.
 
 Score components (weighted sum):
 
-    1. Arousal penalty       — high arousal ↓ receptivity   (weight 0.40)
+    1. Arousal penalty       - high arousal lowers receptivity   (weight 0.40)
        Based on Breuer et al. (2021): low-to-moderate arousal maximises
        attention to sponsor messages.
 
-    2. Valence penalty       — strong negative valence ↓ receptivity (weight 0.20)
+    2. Valence penalty       - strong negative valence lowers receptivity (weight 0.20)
        Ads shown during anger/grief create negative brand associations.
 
-    3. Pressure penalty      — high on-pitch pressure ↓ receptivity  (weight 0.20)
+    3. Pressure penalty      - high on-pitch pressure lowers receptivity  (weight 0.20)
        After intense attacking phases, a fatigue lull follows
        (Leifsson et al., 2024), but fans are still emotionally engaged
        DURING the pressure spike.
 
-    4. Recent event penalty  — goal / red card in last window ↓ receptivity (weight 0.20)
+    4. Recent event penalty  - goal / red card in last window lowers receptivity (weight 0.20)
        Fans need ~5 min to return to baseline after a high-intensity event
        (Pawlowski et al., 2024).
 
-A window is flagged as AD_SAFE  if score ≥ 0.60,
-                     AD_RISKY  if score ∈ [0.40, 0.60),
+A window is flagged as AD_SAFE  if score >= 0.60,
+                     AD_RISKY  if score in [0.40, 0.60),
                      NO_AD     if score < 0.40.
 
 Usage
@@ -59,6 +59,9 @@ RISKY_THRESHOLD = 0.40
 # Pressure normalisation: values above this cap are treated as maximum pressure
 PRESSURE_CAP = 50.0
 
+# Window size in minutes — must match temporal_alignment.WINDOW_SIZE
+WINDOW_SIZE = 5
+
 
 def _normalise_pressure(pressure: pd.Series) -> pd.Series:
     """Clip and scale pressure to [0, 1]."""
@@ -80,15 +83,14 @@ def score_windows(df: pd.DataFrame) -> pd.DataFrame:
     """
     result = df.copy()
 
-    # ---- Component 1: Arousal penalty (high arousal → 1.0 penalty)
-    # mean_arousal is already ∈ [0, 1]; default to 0.5 if classifier not run yet
+    # ---- Component 1: Arousal penalty (high arousal -> 1.0 penalty)
     if "mean_arousal" in result.columns:
         result["arousal_penalty"] = result["mean_arousal"].clip(0, 1)
     else:
         result["arousal_penalty"] = 0.5  # neutral assumption
 
     # ---- Component 2: Valence penalty
-    # Valence ∈ [-1, 1]; default to 0 (neutral) if not available
+    # Valence in [-1, 1]; negative valence -> positive penalty
     if "mean_valence" in result.columns:
         result["valence_penalty"] = ((-result["mean_valence"]).clip(0, 1))
     else:
@@ -110,15 +112,12 @@ def score_windows(df: pd.DataFrame) -> pd.DataFrame:
     result["receptivity_score"] = (1.0 - raw_penalty).clip(0, 1)
 
     # ---- Ad label
-    def _label(score):
-        if score >= SAFE_THRESHOLD:
-            return "AD_SAFE"
-        elif score >= RISKY_THRESHOLD:
-            return "AD_RISKY"
-        else:
-            return "NO_AD"
-
-    result["ad_label"] = result["receptivity_score"].apply(_label)
+    conditions = [
+        result["receptivity_score"] >= SAFE_THRESHOLD,
+        result["receptivity_score"] >= RISKY_THRESHOLD,
+    ]
+    choices = ["AD_SAFE", "AD_RISKY"]
+    result["ad_label"] = np.select(conditions, choices, default="NO_AD")
 
     return result
 
@@ -137,7 +136,7 @@ def recommend_ad_slots(
         Maximum ad slots to recommend per match.
     min_gap_windows : int
         Minimum number of 5-min windows between consecutive ads
-        (default 2 → ads at least 10 min apart).
+        (default 2 -> ads at least 10 min apart).
 
     Returns
     -------
@@ -146,10 +145,10 @@ def recommend_ad_slots(
         receptivity_score, ad_label, dominant_emotion,
         mean_arousal, mean_valence, mean_pressure
     """
+    MIN_GAP_MINUTES = min_gap_windows * WINDOW_SIZE  # e.g. 2 * 5 = 10 min
     recommendations = []
 
     for fixture_id, group in scored_df.groupby("fixture_id"):
-        # Only consider AD_SAFE windows
         candidates = (
             group[group["ad_label"] == "AD_SAFE"]
             .sort_values("receptivity_score", ascending=False)
@@ -158,10 +157,9 @@ def recommend_ad_slots(
 
         selected = []
         for _, row in candidates.iterrows():
-            # Enforce minimum gap
             if selected:
                 gaps = [abs(row["window_5min"] - s["window_5min"]) for s in selected]
-                if min(gaps) < min_gap_windows * 5:
+                if min(gaps) < MIN_GAP_MINUTES:
                     continue
             selected.append(row)
             if len(selected) >= max_ads_per_match:
@@ -173,14 +171,16 @@ def recommend_ad_slots(
         "fixture_id", "match", "window_5min", "period_label",
         "receptivity_score", "ad_label", "dominant_emotion",
         "mean_arousal", "mean_valence", "mean_pressure",
-        "tweet_count", "high_intensity_count", "recent_high_intensity"
+        "tweet_count", "high_intensity_count", "recent_high_intensity",
     ]
     result = pd.DataFrame(recommendations)
     if result.empty:
         return result
-    return result[[c for c in cols if c in result.columns]].sort_values(
-        ["fixture_id", "window_5min"]
-    ).reset_index(drop=True)
+    return (
+        result[[c for c in cols if c in result.columns]]
+        .sort_values(["fixture_id", "window_5min"])
+        .reset_index(drop=True)
+    )
 
 
 def summarise_policy(scored_df: pd.DataFrame) -> pd.DataFrame:
@@ -194,5 +194,7 @@ def summarise_policy(scored_df: pd.DataFrame) -> pd.DataFrame:
         mean_receptivity=("receptivity_score", "mean"),
         best_receptivity=("receptivity_score", "max"),
     ).reset_index()
-    summary["pct_safe"] = (summary["safe_windows"] / summary["total_windows"] * 100).round(1)
+    summary["pct_safe"] = (
+        summary["safe_windows"] / summary["total_windows"] * 100
+    ).round(1)
     return summary

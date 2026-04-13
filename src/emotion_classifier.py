@@ -6,7 +6,12 @@ emotion inference on tweet text.
 
 The model outputs probabilities for 4 emotions:
     anger, fear, joy, sadness
-(the full model also covers surprise and disgust on some checkpoints)
+
+NOTE: some checkpoint versions of this model also output 'optimism'.
+We include weights for all observed labels. Labels not present in a
+given checkpoint are simply never matched (the get() call below
+defaults gracefully), so no code change is needed if the label set
+varies between checkpoints.
 
 Usage
 -----
@@ -18,7 +23,6 @@ results = clf.predict_batch(tweet_texts)   # list of dicts
 
 from __future__ import annotations
 
-import os
 from typing import List, Dict
 
 import torch
@@ -29,8 +33,6 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 # Model configuration
 # ---------------------------------------------------------------------------
 
-# Best available Twitter-trained emotion model on HuggingFace.
-# Falls back to sentiment if this is unavailable.
 MODEL_NAME = "cardiffnlp/twitter-roberta-base-emotion"
 
 # Maximum token length (model limit is 514; we truncate conservatively)
@@ -41,23 +43,23 @@ DEFAULT_BATCH_SIZE = 32
 
 # Arousal mapping: how much each emotion contributes to viewer arousal.
 # Based on Russell's circumplex model + Breuer et al. (2021) findings.
+# 'optimism' added because some Cardiff checkpoint versions output it;
+# mapped to moderate-high arousal / positive valence (similar to joy).
 AROUSAL_WEIGHTS = {
-    "anger":    1.0,   # high arousal, negative valence
-    "fear":     0.9,   # high arousal, negative valence
-    "surprise": 0.85,  # high arousal, variable valence
-    "joy":      0.6,   # moderate-high arousal, positive valence
-    "sadness":  0.2,   # low arousal, negative valence
-    "disgust":  0.7,   # moderate arousal, negative valence
+    "anger":     1.0,   # high arousal, negative valence
+    "fear":      0.9,   # high arousal, negative valence
+    "joy":       0.6,   # moderate-high arousal, positive valence
+    "sadness":   0.2,   # low arousal, negative valence
+    "optimism":  0.55,  # moderate arousal, positive valence
 }
 
 # Valence mapping (+1 positive, -1 negative)
 VALENCE_WEIGHTS = {
     "anger":    -1.0,
     "fear":     -0.8,
-    "surprise":  0.0,
     "joy":       1.0,
     "sadness":  -0.9,
-    "disgust":  -0.7,
+    "optimism":  0.6,
 }
 
 
@@ -95,7 +97,7 @@ class EmotionClassifier:
         List of dicts, one per input text, with keys:
             - one key per emotion label (probability)
             - 'dominant_emotion'  (str)
-            - 'arousal'           (float 0–1)
+            - 'arousal'           (float 0-1)
             - 'valence'           (float -1 to +1)
         """
         all_results = []
@@ -119,7 +121,8 @@ class EmotionClassifier:
                 dominant = self.labels[int(np.argmax(row))]
                 result["dominant_emotion"] = dominant
 
-                # Weighted arousal & valence
+                # Weighted arousal & valence — unknown labels default to
+                # neutral (0.5 arousal, 0.0 valence) via get()
                 result["arousal"] = float(sum(
                     AROUSAL_WEIGHTS.get(lbl, 0.5) * prob
                     for lbl, prob in zip(self.labels, row)
