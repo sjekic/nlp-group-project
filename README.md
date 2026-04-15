@@ -76,6 +76,56 @@ pip install -r requirements.txt
 
 All notebooks are designed to run on **Google Colab** (free tier). Mount your Drive and set `DATA_DIR` at the top of each notebook.
 
+## Cluster Execution (Slurm)
+
+This repo includes script-based pipeline runners and Slurm templates:
+
+- `scripts/run_preprocessing.py` (CPU)
+- `scripts/run_emotion_inference.py` (GPU)
+- `scripts/run_postprocessing.py` (CPU)
+- `scripts/slurm_01_preprocess_cpu.sbatch`
+- `scripts/slurm_02_emotion_gpu.sbatch`
+- `scripts/slurm_03_postprocess_cpu.sbatch`
+- `scripts/submit_cluster_pipeline.sh`
+
+Detailed step-by-step instructions are in:
+
+- `docs/UNIVERSITY_CLUSTER_RUNBOOK.md`
+
+### What We Actually Did on the IE Cluster (Simple Summary)
+
+We ran the pipeline on the university HPC cluster (`rust` login node + Slurm jobs on `haskell`).
+
+1. Created and activated a Conda environment:
+   - `conda create -n nlp-project python=3.11 -y`
+   - `conda activate nlp-project`
+2. Copied this repo from laptop to cluster with `rsync`.
+3. Submitted the 3-stage pipeline with Slurm:
+   - Stage 1 (CPU): preprocessing
+   - Stage 2 (GPU): emotion inference
+   - Stage 3 (CPU): alignment + scoring + summaries
+4. Checked status with:
+   - `squeue -u $USER`
+   - `sacct -u <user> --format=JobID,JobName,State,ExitCode,Elapsed --starttime today`
+5. Outcome:
+   - `nlp-preprocess` completed
+   - `nlp-emotion` completed
+   - first `nlp-postprocess` run failed due to a pandas merge key issue (`merge_asof` key dtype/sort)
+6. Fix applied:
+   - updated `src/temporal_alignment.py` to enforce compatible `window_5min` types and sorting before `merge_asof`
+   - re-submitted postprocess job
+7. Final result:
+   - postprocess completed successfully and all final output CSVs were generated.
+
+Useful final outputs:
+- `outputs/tweets_with_emotions.csv`
+- `outputs/aligned_windows.csv`
+- `outputs/scored_windows.csv`
+- `outputs/recommended_ad_slots.csv`
+- `outputs/match_policy_summary.csv`
+- `outputs/correlation_matrix.csv`
+- `outputs/window_stats.csv`
+
 ---
 
 ## Data Sources

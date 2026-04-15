@@ -141,7 +141,20 @@ def attach_match_events(
         .sort_values(["fixture_id", "window_5min"])
     )
 
-    merged_sorted = merged.sort_values(["fixture_id", "window_5min"])
+    merged_sorted = merged.copy()
+    # merge_asof requires identical dtypes and sorted keys on both sides.
+    merged_sorted["window_5min"] = pd.to_numeric(
+        merged_sorted["window_5min"], errors="coerce"
+    ).astype(float)
+    period_map["window_5min"] = pd.to_numeric(
+        period_map["window_5min"], errors="coerce"
+    ).astype(float)
+    merged_sorted = merged_sorted.dropna(subset=["window_5min"])
+    period_map = period_map.dropna(subset=["window_5min"])
+    # For merge_asof, sort primarily by the "on" key, then by group key.
+    merged_sorted = merged_sorted.sort_values(["window_5min", "fixture_id"]).reset_index(drop=True)
+    period_map = period_map.sort_values(["window_5min", "fixture_id"]).reset_index(drop=True)
+
     if not period_map.empty:
         merged_sorted = pd.merge_asof(
             merged_sorted,
